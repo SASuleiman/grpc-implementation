@@ -1,4 +1,4 @@
-package org.devgurus.grpcimplementation.service;
+package org.devgurus.grpcimplementation.controller;
 
 import io.grpc.stub.StreamObserver;
 import net.devh.boot.grpc.server.service.GrpcService;
@@ -7,7 +7,7 @@ import org.devgurus.grpcimplementation.GreetingResponse;
 import org.devgurus.grpcimplementation.GreetingServiceGrpc;
 
 @GrpcService
-public class TestService extends GreetingServiceGrpc.GreetingServiceImplBase {
+public class GrpcTestController extends GreetingServiceGrpc.GreetingServiceImplBase {
 
     @Override
     public void greet(GreetingRequest request, StreamObserver<GreetingResponse> responseObserver) {

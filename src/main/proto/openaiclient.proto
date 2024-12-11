@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package org.devgurus.grpcimplementation;
+
+option java_multiple_files = true;
+
+service OpenAiService {
+  rpc Ask (OpenAiRequest) returns (OpenAiResponse);
+}
+
+message OpenAiRequest {
+  string question = 1;
+}
+
+message OpenAiResponse {
+  string message = 1;
+  string conclusion = 2;
+}
