@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package org.devgurus.grpcimplementation;
+
+option java_multiple_files = true;
+
+service FraudCheckService {
+  rpc FraudCheck (FraudCheckRequest) returns (FraudCheckResponse);
+}
+
+message FraudCheckRequest {
+  double amount = 1;
+  string route = 2;
+}
+
+message FraudCheckResponse {
+  bool fraudTransaction = 1;
+  int64 pastTransactionCountGenerated = 2;
+  string message = 3;
+
+}
