@@ -8,7 +8,6 @@ import org.devgurus.grpcimplementation.OpenAiServiceGrpc;
 import org.devgurus.grpcimplementation.model.ChatResponse;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.
 
 @GrpcService
 public class OpenAiController extends OpenAiServiceGrpc.OpenAiServiceImplBase {
